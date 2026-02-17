@@ -1,7 +1,8 @@
 import os
 
-BOT_TOKEN = os.getenv("BOT_TOKEN")
-ADMIN_ID = int(os.getenv("ADMIN_ID"))
+# Добавь значения по умолчанию чтобы не падало если переменных нет
+BOT_TOKEN = os.getenv("BOT_TOKEN", "")
+ADMIN_ID = int(os.getenv("ADMIN_ID", "0")) if os.getenv("ADMIN_ID") else 0
 
 # Услуги и цены
 SERVICES = {
